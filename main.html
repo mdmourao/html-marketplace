@@ -17,24 +17,32 @@
 </head>
 
 <body onload="loadDatav2();">
-    <h1>Welcome</h1>
-    <h2>Marketplace PT</h2>
+    <div class="container">
 
-    <label for="search_text">Search Item</label>
-    <input type="text" id="search_text" name="search_text" oninput="filterData()"><br><br>
+        <div class=""></div>
+        <div class="">
 
-    <label for="cupom">Cupom</label>
-    <input type="text" id="cupom" name="cupom" onchange="processCupom()"><br><br>
+            <h1>Welcome</h1>
+            <h2>Marketplace PT</h2>
 
-    <button onclick="orderByPrice(true)">Order By Highest Price</button>
-    <button onclick="orderByPrice(false)">Order By Lowest Price</button>
+            <label for="search_text">Search Item</label>
+            <input type="text" id="search_text" name="search_text" oninput="filterData()"><br><br>
 
-    <ul id="list"></ul>
+            <button class="filter" onclick="orderByPrice(true)">Order By Highest Price</button>
+            <button class="filter" onclick="orderByPrice(false)">Order By Lowest Price</button>
 
-    <h1>Cart</h1>
-    <button onclick="clearCart()">Clear Cart</button>
-    <span id="cart_info"></span>
-    <ul id="cart_list"></ul>
+            <ul id="list"></ul>
+            <h1>Cart</h1>
+            
+            <label for="cupom">Cupom</label>
+            <input type="text" id="cupom" name="cupom" onchange="processCupom()"><br><br>
+
+            <button class="danger" onclick="clearCart()">Clear Cart</button>
+            <span id="cart_info"></span>
+            <ul id="cart_list"></ul>
+        </div>
+        <div class=""></div>
+    </div>
 </body>
 
 </html>

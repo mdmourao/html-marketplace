@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 600px;
+    margin: auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button.filter {
+    background-color: blueviolet;
+}
+
+button.danger {
+    background-color: red;
+}

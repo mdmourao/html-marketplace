@@ -48,7 +48,6 @@ function processCupom() {
     } else {
         if (cupom.value === "") {
             alert("Por favor, insira um cupom");
-            updateList(localData);
         } else {
             alert("Cupom inválido");
         }
@@ -58,14 +57,18 @@ function processCupom() {
 // Map data using map() method to add discount
 // spread operator to copy object
 function addBlackFridayDiscount() {
-    const discountedItems = localData.map((item) => {
-        return {
-            ...item,
-            price: (item.price * 0.5).toFixed(2)
-        }
-    });
+    const cartData = JSON.parse(localStorage.getItem("cart") || "{}");
+    const updatedCartData = {
+        last_update: Date.now(),
+        items: cartData.items.map((item) => {
+            return {
+                ...item,
+                price: item.price * 0.5
+            }
+        })
+    }
 
-    updateList(discountedItems);
+    updateCartInfo(updatedCartData);
 
 }
 
