@@ -16,8 +16,25 @@
 
 </head>
 
-<body>
-    <h1 id="hello">Hello World!</h1>
+<body onload="loadDatav2();">
+    <h1>Welcome</h1>
+    <h2>Marketplace PT</h2>
+
+    <label for="search_text">Search Item</label>
+    <input type="text" id="search_text" name="search_text" oninput="filterData()"><br><br>
+
+    <label for="cupom">Cupom</label>
+    <input type="text" id="cupom" name="cupom" onchange="processCupom()"><br><br>
+
+    <button onclick="orderByPrice(true)">Order By Highest Price</button>
+    <button onclick="orderByPrice(false)">Order By Lowest Price</button>
+
+    <ul id="list"></ul>
+
+    <h1>Cart</h1>
+    <button onclick="clearCart()">Clear Cart</button>
+    <span id="cart_info"></span>
+    <ul id="cart_list"></ul>
 </body>
 
 </html>
